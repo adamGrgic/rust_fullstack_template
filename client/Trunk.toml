@@ -1,0 +1,16 @@
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "./tailwindcss -i ./input.css -o ./style.css --minify"]
+
+[build]
+target = "index.html"
+dist = "dist"
+
+[watch]
+ignore = ["dist", "style.css"]
+
+[serve]
+addresses = ["127.0.0.1"]
+port = 8081
+open = false

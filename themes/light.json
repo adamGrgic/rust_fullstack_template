@@ -1,0 +1,78 @@
+{
+  "name": "Light",
+  "is_active": true,
+  "settings": {
+    "borders": {
+      "radius_lg": {
+        "value": "0.75rem",
+        "description": "Large border radius"
+      },
+      "radius_md": {
+        "value": "0.5rem",
+        "description": "Medium border radius"
+      },
+      "radius_sm": {
+        "value": "0.25rem",
+        "description": "Small border radius"
+      },
+      "radius_xl": {
+        "value": "1rem",
+        "description": "Extra large border radius"
+      }
+    },
+    "colors": {
+      "color_primary": {
+        "value": "#3b82f6",
+        "description": "Primary brand color"
+      },
+      "color_secondary": {
+        "value": "#64748b",
+        "description": "Secondary accent color"
+      },
+      "color_tertiary": {
+        "value": "#10b981",
+        "description": "Tertiary accent color"
+      }
+    },
+    "spacing": {
+      "spacing_lg": {
+        "value": "1.5rem",
+        "description": "Large spacing"
+      },
+      "spacing_md": {
+        "value": "1rem",
+        "description": "Medium spacing"
+      },
+      "spacing_sm": {
+        "value": "0.5rem",
+        "description": "Small spacing"
+      },
+      "spacing_xl": {
+        "value": "2rem",
+        "description": "Extra large spacing"
+      },
+      "spacing_xs": {
+        "value": "0.25rem",
+        "description": "Extra small spacing"
+      }
+    },
+    "typography": {
+      "font_size_base": {
+        "value": "1rem",
+        "description": "Base font size"
+      },
+      "font_size_lg": {
+        "value": "1.125rem",
+        "description": "Large font size"
+      },
+      "font_size_sm": {
+        "value": "0.875rem",
+        "description": "Small font size"
+      },
+      "font_size_xl": {
+        "value": "1.25rem",
+        "description": "Extra large font size"
+      }
+    }
+  }
+}

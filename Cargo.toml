@@ -1,0 +1,46 @@
+[workspace]
+resolver = "2"
+members = [
+    "core",
+    "platform/api",
+    "client",
+    "cli",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+# Shared dependencies
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.35", features = ["full"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1.6", features = ["serde", "v4", "js"] }
+
+# API dependencies
+axum = "0.7"
+sqlx = { version = "0.7", features = ["runtime-tokio-rustls", "postgres", "uuid", "chrono", "migrate"] }
+tower = "0.4"
+tower-http = { version = "0.5", features = ["cors", "trace"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+dotenvy = "0.15"
+
+# Client dependencies
+leptos = { version = "0.6", features = ["csr"] }
+leptos_router = { version = "0.6", features = ["csr"] }
+leptos_meta = { version = "0.6", features = ["csr"] }
+console_error_panic_hook = "0.1"
+console_log = "1.0"
+log = "0.4"
+wasm-bindgen = "0.2"
+gloo-net = { version = "0.5", features = ["http"] }
+
+[profile.release]
+opt-level = 'z'
+lto = true
+codegen-units = 1

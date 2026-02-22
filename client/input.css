@@ -1,0 +1,144 @@
+@import "tailwindcss";
+
+/* Theme variables (dynamically updated via ThemeContext) */
+:root {
+  --color-primary: #3b82f6;
+  --color-secondary: #64748b;
+  --color-tertiary: #10b981;
+  
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  
+  /* Light theme colors */
+  --bg-primary: rgb(248 250 252);
+  --bg-secondary: rgb(255 255 255);
+  --text-primary: rgb(30 41 59);
+  --text-secondary: rgb(100 116 139);
+  --border-color: rgb(226 232 240);
+}
+
+/* Dark theme */
+.dark {
+  --bg-primary: rgb(15 23 42);
+  --bg-secondary: rgb(30 41 59);
+  --text-primary: rgb(248 250 252);
+  --text-secondary: rgb(148 163 184);
+  --border-color: rgb(51 65 85);
+}
+
+@theme {
+  --color-primary-blue: #3b82f6;
+  --color-primary-dark: #2563eb;
+}
+
+/* Base styles with theme support */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  line-height: 1.6;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Light mode specific */
+:root:not(.dark) {
+  color-scheme: light;
+}
+
+/* Dark mode specific */
+.dark {
+  color-scheme: dark;
+}
+
+/* Theme color utilities */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+
+.bg-tertiary {
+  background-color: var(--color-tertiary);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-secondary {
+  color: var(--color-secondary);
+}
+
+.text-tertiary {
+  color: var(--color-tertiary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
+}
+
+/* Focus states with theme colors */
+input:focus,
+textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+}
+
+/* SideNav active state */
+.nav-item-active {
+  background-color: var(--color-primary) !important;
+}
+
+/* Dark mode overrides */
+.dark .bg-white {
+  background-color: var(--bg-secondary);
+}
+
+.dark .bg-slate-50 {
+  background-color: var(--bg-primary);
+}
+
+.dark .bg-slate-100 {
+  background-color: rgb(51 65 85);
+}
+
+.dark .text-slate-600,
+.dark .text-slate-700,
+.dark .text-slate-800,
+.dark .text-slate-900 {
+  color: var(--text-primary);
+}
+
+.dark .text-slate-400 {
+  color: var(--text-secondary);
+}
+
+.dark .border-slate-200 {
+  border-color: var(--border-color);
+}
+
+.dark .divide-slate-100 > * + * {
+  border-color: var(--border-color);
+}
+
+.dark .shadow-md {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+.dark .hover\:bg-slate-50:hover {
+  background-color: rgb(51 65 85);
+}
+
+.dark .hover\:bg-slate-700:hover {
+  background-color: rgb(51 65 85);
+}
